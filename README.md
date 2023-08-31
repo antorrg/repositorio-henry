@@ -1,8 +1,10 @@
 # Repositorio Henry/ Sobre GIT
-<**https://jonmircha.com/git**>
+[**https://jonmircha.com/git**](https://jonmircha.com/git)
+
 (Toda la información que vuelco aquí fue extraida del curso y la página mencionada).
 
 ### Configurando Git por primera vez:
+
 git --version
 
 
@@ -58,7 +60,6 @@ git init
 
 ---
 
-<hr>
 
 ## Flujo básico
 
@@ -80,40 +81,40 @@ Es el área correspondiente al estado remote y es el directorio remoto donde alm
 
 ## Fujo básico de Git/ Github:
 
-#### git add archivo/directorio
+git add archivo/directorio
 
 Agregar los cambios de un archivo al staged.
 
-#### git add .
+git add .
 
 Agregar todos los cambios de todos los archivos al staged
 
 
-#### git commit -m "mensaje descriptivo del cambio"
+git commit -m "mensaje descriptivo del cambio"
 
 Los cambios son comprometidos en el repositorio, debes escribir el mensaje del cambio cuando se abra el archivo de configuración. Al terminar guarda y cierra el archivo para que los cambios tengan efecto.
 
 
-#### git commit
+git commit
 
 Es un shortcut del comando anterior, escribes y confirmas el mensaje del cambio en un sólo paso.
 
 
-#### git remote add origin `https://github.com/usuario/repositorio.git`
+git remote add origin `https://github.com/usuario/repositorio.git`
 
 Se agrega el origen remoto de tu repositorio de GitHub
 
-#### git push -u origin master
+git push -u origin master
 
 La primera vez que vinculamos el repositorio remoto con el local.
 
-#### git push
+git push
 
 para las subsecuentes actualizaciones, si no cambias de rama.
 
-#### git pull
+git pull
 
-#para descargar los cambios del repositorio remoto al local.
+para descargar los cambios del repositorio remoto al local.
 <hr>
 
 ## De master a main
@@ -134,47 +135,47 @@ Entonces el flujo básico quedaría de la siguiente manera:
 
 ### Para repositorios nuevos
 
-#### git init
+git init
 
-#### git add .
+git add .
 
-#### git commit -m "Primer commit"
+git commit -m "Primer commit"
 
-#### git branch -M main
+git branch -M main
 
-#### git remote add origin `https://github.com/usuario/repositorio.git`
+git remote add origin `https://github.com/usuario/repositorio.git`
 
-#### git push -u origin main
+git push -u origin main
 
 ### Para repositorios existentes
 
-#### git branch -M main
+git branch -M main
 
-#### git remote add origin `https://github.com/usuario/repositorio.git`
+git remote add origin `https://github.com/usuario/repositorio.git`
 
-#### git push -u origin main
+git push -u origin main
 
-### Para reemplazar la rama master por main en GitHub
+## Para reemplazar la rama master por main en GitHub
 
 ### Paso 1
 
 Crea la rama local main y pásale el historial de la rama master
 
-#### git branch -m master main
+git branch -m master main
 
 
 ### Paso 2
 
 Haz un push de la nueva rama local main en el repositorio remoto de GitHub
 
-#### git push -u origin main
+git push -u origin main
 
 
 ### Paso 3
 
 Cambia el HEAD actual a la rama main
 
-#### git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
 ### Paso 4
 
@@ -186,28 +187,28 @@ Para hacerlo, sigue las instrucciones de este [**enlace.**](https://docs.github.
 
 Elimina la rama master del repositorio remoto
 
-#### git push origin --delete master
+ git push origin --delete master
 
 Para reemplazar la rama master por main en Git
 
-#### git config --global init.defaultBranch main
+git config --global init.defaultBranch main
 
 <hr>
 
 ## Ayuda
 
 ### Ayuda en la terminal
-#### git comando -h
+git comando -h
 
 ### Ayuda en el navegador
 
-#### git help comando
+git help comando
 
 <hr>
 
 ### Clonar repositorios
 
-#### git clone `https://github.com/usuario/repositorio.git`
+git clone `https://github.com/usuario/repositorio.git`
 
 <hr>
 
@@ -218,35 +219,35 @@ Una rama nos permite aislar una nueva funcionalidad en nuestro código que despu
 
 ### Crear rama:
 
-#### git branch nombre-rama
+git branch nombre-rama
 
 ### Cambiar de rama:
-#### git checkout nombre-rama
+git checkout nombre-rama
 
 ### Crear una rama y cambiarte a ella:
-#### git checkout -b rama
+git checkout -b rama
 
 ### Eliminar rama:
 git branch -d nombre-rama
 
 ### Eliminar ramas remotas:
-#### git push origin --delete nombre-rama
+git push origin --delete nombre-rama
 
 ### Eliminar rama (forzado):
-#### git branch -D nombre-rama
+git branch -D nombre-rama
 
 ### Listar todas las ramas del repositorio:
-#### git branch
+git branch
 
 ### Lista ramas no fusionadas a la rama actual:
-#### git branch --no-merged
+git branch --no-merged
 
 ### Lista ramas fusionadas a la rama actual:
-#### git branch --merged
+git branch --merged
 
 ### Rebasar ramas:
-#### git checkout rama-secundaria
-#### git rebase rama-principal
+git checkout rama-secundaria
+git rebase rama-principal
 
 <hr>
 
@@ -267,10 +268,10 @@ Cuando se fusionan ramas se pueden dar 2 resultados diferentes:
 
 
 ### Nos cambiamos a la rama principal que quedará de la fusión
-#### git checkout rama-principal
+git checkout rama-principal
 
 ### Ejecutamos el comando merge con la rama secundaria a fusionar
-#### git merge rama-secundaria
+git merge rama-secundaria
 
 <hr>
 
@@ -278,23 +279,23 @@ Cuando se fusionan ramas se pueden dar 2 resultados diferentes:
 
 Puedes agregar modificaciones al último cambio sin editar el mensaje del último commit:
 
-#### git commit --amend --no-edit
+git commit --amend --no-edit
 
 Editando el mensaje del último commit:
 
-#### git commit --amend -m "nuevo mensaje para el último commit"
+git commit --amend -m "nuevo mensaje para el último commit"
 
 ### Eliminar el último commit:
 
-#### git reset --hard HEAD~1
+git reset --hard HEAD~1
 
 Podemos desplazarnos en el historial del repositorio hacia atrás o adelante en cambios o ramas, sin afectar el repositorio como tal.
 
 ### Cambiar a una rama:
-#### git checkout nombre-rama
+git checkout nombre-rama
 
 ### Cambiar a un commit en particular:
-#### git checkout id-commit
+git checkout id-commit
 
 ## Pd:
 El resto de la información como por ejemplo: registro y reseteo del historial, reseteo del repositorio, colaborar con github etc., se encuentra en la página de la cual extraje esta información [**(Clic en este enlace)**](https://jonmircha.com/git)
